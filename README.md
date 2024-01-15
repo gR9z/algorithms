@@ -1,0 +1,2 @@
+# algorithms
+JavaScript for fun
