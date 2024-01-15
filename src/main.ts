@@ -1,7 +1,7 @@
 import quickSort from './algorithms/quickSort';
 
 // use of the quickSort algorithm
-console.log('-- Quick Sort Algorithm --');
+console.log('----- Quick Sort Algorithm -----');
 const originalArray = Array.from({ length: 50 }, () =>
 	Math.floor(Math.random() * 50)
 );
@@ -13,4 +13,4 @@ console.timeEnd('quickSortExecutionTime');
 
 console.log('originalArray: ', originalArray);
 console.log('newArray:', newArr);
-console.log('--------------------------');
+console.log('- End of Quick Sort Algorithm -');
