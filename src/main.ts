@@ -4,6 +4,7 @@ import bubbleSort from './algorithms/bubbleSort';
 import quickSortAlgorithm from './algorithms/quickSort';
 import recursiveSum from './algorithms/recursivity';
 import selectionSort from './algorithms/selectionSort';
+import mergeSort from './algorithms/mergeSort';
 
 const arrLength = 10;
 const maxNumber = 101;
@@ -40,9 +41,17 @@ const maxNumber = 101;
 // 	)
 // );
 
+// display(
+// 	'selectionSort',
+// 	selectionSort,
+// 	Array.from({ length: arrLength }, () =>
+// 		Math.floor(Math.random() * maxNumber)
+// 	)
+// );
+
 display(
-	'selectionSort',
-	selectionSort,
+	'mergeSort',
+	mergeSort,
 	Array.from({ length: arrLength }, () =>
 		Math.floor(Math.random() * maxNumber)
 	)
