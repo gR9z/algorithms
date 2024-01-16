@@ -13,7 +13,7 @@
  */
 
 /**
- * Partition function for QuickSort.
+ * Partition function for QuickSort Algorithm.
  * Key in QuickSort. It selects a pivot.
  * The function rearranges the array around this pivot.
  * The pivot is usually the last element of the segment.
