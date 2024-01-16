@@ -9,9 +9,9 @@
  * Space Complexity:
  * - O(1). Selection sort is an in-place sorting algorithm. It requires only a constant amount of additional memory space for its operations.
  *
- * Selection sort is a simple sorting algorithm that divides the input list into two parts: a sorted sublist of items which is built up from left to right, and a sublist of the remaining unsorted items. At each step, the algorithm finds the smallest (or largest, depending on sorting order) element in the unsorted sublist and exchanges it with the leftmost unsorted element, moving the sublist boundaries one element to the right.
+ * Selection sort is a simple sorting algorithm that divides the input list into two parts: a sorted sublist of items which is built up from left to right and a sublist of the remaining unsorted items. At each step, the algorithm finds the smallest (or largest, depending on sorting order) element in the unsorted sublist and exchanges it with the leftmost unsorted element, moving the sublist boundaries one element to the right.
  *
- * The algorithm works by iterating over the array with two nested loops: the outer loop tracks the position of the first unsorted element, and the inner loop searches for the smallest element in the unsorted part of the array. The condition `if (smallestIndex !== i)` ensures that an exchange is only made if the smallest element found is not already in the current sorted position. This check avoids unnecessary swaps and is particularly useful for maintaining relative order of duplicate elements as much as possible, contributing to the overall efficiency.
+ * The algorithm works by iterating over the array with two nested loops: the outer loop tracks the position of the first unsorted element, and the inner loop searches for the smallest element in the unsorted part of the array.
  *
  * The reason for using `arr.length - 1` in the outer loop is because on the final pass, the unsorted part will consist of only one element, which is necessarily the largest remaining element and is already in its correct position.
  *
@@ -22,15 +22,21 @@
  * @param {number[]} arr The array of numbers to be sorted.
  * @returns {number[]} The sorted array.
  */
-const bubbleSort = (arr: number[]): number[] => {
-	for (let i = 0; i < arr.length; i++) {
-		for (let j = 0; j < arr.length - 1; j++) {
-			if (arr[j] > arr[j + 1]) {
-				[arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+const selectionSort = (arr: number[]): number[] => {
+	for (let i = 0; i < arr.length - 1; i++) {
+		let smallestIndex = i;
+		for (let j = i + 1; j < arr.length; j++) {
+			if (arr[j] < arr[smallestIndex]) {
+				smallestIndex = j;
 			}
 		}
+
+		if (smallestIndex !== i) {
+			[arr[smallestIndex], arr[i]] = [arr[i], arr[smallestIndex]];
+		}
 	}
+
 	return arr;
 };
 
-export default bubbleSort;
+export default selectionSort;
