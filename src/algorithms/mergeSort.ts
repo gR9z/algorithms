@@ -60,16 +60,6 @@ const merge = (left: number[], right: number[]): number[] => {
 };
 
 /**
- * MergeSort Algorithm Complexity Analysis
- *
- * Time Complexity:
- * - Worst case: O(n log n). Occurs in all cases because the array is always split into halves and then merged.
- * - Average case: O(n log n). The array is consistently split and merged, making the algorithm very efficient.
- * - Best case: O(n log n). Even in the best scenario, the splitting and merging processes are the same.
- *
- * Space Complexity:
- * - O(n). MergeSort requires additional space to store the temporary left and right arrays, proportional to the size of the input array.
- *
  * MergeSort is a divide and conquer algorithm that divides the input array into two halves, calls itself for the two halves, and then merges the two sorted halves.
  * The merge() function is used for merging two halves. The mergeSort() function recursively divides the array into halves until the base case of a single element (or empty) array is reached.
  *
