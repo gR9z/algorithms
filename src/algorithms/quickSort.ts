@@ -91,4 +91,9 @@ const quickSort = (arr: number[], low: number, high: number): void => {
 	}
 };
 
-export default quickSort;
+const quickSortAlgorithm = (arr: number[]): number[] => {
+	quickSort(arr, 0, arr.length - 1);
+	return arr;
+};
+
+export default quickSortAlgorithm;
