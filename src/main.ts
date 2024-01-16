@@ -1,16 +1,11 @@
-import quickSort from './algorithms/quickSort';
+import display from './utils/displayUtils';
 
-// use of the quickSort algorithm
-console.log('----- Quick Sort Algorithm -----');
-const originalArray = Array.from({ length: 50 }, () =>
-	Math.floor(Math.random() * 50)
-);
-const newArr = [...originalArray];
+import bubbleSort from './algorithms/bubbleSort';
+import quickSortAlgorithm from './algorithms/quickSort';
+import recursiveSum from './algorithms/recursivity';
 
-console.time('quickSortExecutionTime');
-quickSort(newArr, 0, newArr.length - 1);
-console.timeEnd('quickSortExecutionTime');
+const arr = [128, 15, 2, 44, 25, 19, 5, 18, 20, 99];
 
-console.log('originalArray: ', originalArray);
-console.log('newArray:', newArr);
-console.log('- End of Quick Sort Algorithm -');
+display('bubbleSort', bubbleSort, arr);
+display('quickSort', quickSortAlgorithm, arr);
+display('resursiveSum', recursiveSum, arr);
