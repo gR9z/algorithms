@@ -6,7 +6,7 @@
 -   Linear Search
 -   Merge Sorte
 -   Quick Sort
--   Selection \* Sort
+-   Selection Sort
 -   Recursivity
 
 ## Data Structures
