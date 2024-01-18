@@ -1,13 +1,14 @@
 # Algorithms & Data Structures
 
-## Bubble Sort
+## Algorithms
 
-## Linear Search
+-   Bubble Sort
+-   Linear Search
+-   Merge Sorte
+-   Quick Sort
+-   Selection \* Sort
+-   Recursivity
 
-## Merge Sorte
+## Data Structures
 
-## Quick Sort
-
-## Selection Sort
-
-## Recursivity
+-   Nothing yet
