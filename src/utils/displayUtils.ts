@@ -25,15 +25,14 @@ const display = <T>(
 	data: T[]
 ): void => {
 	console.log(`******* ${name} Algorithm *******`);
-	console.log(`original array: ${data}`);
+
+	console.log('Data: ', data);
 
 	console.time(`${name}ExecutionTime`);
 	const result = fn(data);
 	console.timeEnd(`${name}ExecutionTime`);
 
-	if (typeof result !== 'object') console.log(`result: ${result}`);
-	if (typeof result !== 'number') console.log(`sorted array: ${result}`);
-
+	console.log('result:', result);
 	console.log(`**** End of ${name} Algorithm ***`);
 };
 
