@@ -6,6 +6,7 @@ import recursiveSum from './algorithms/recursivity';
 import selectionSort from './algorithms/selectionSort';
 import mergeSort from './algorithms/mergeSort';
 import linearSearch from './algorithms/linearSearch';
+import binarySearch from './algorithms/binarySearch';
 
 const arrLength = 10;
 const maxNumber = 101;
@@ -81,4 +82,14 @@ const musiciens = [
 // 	)
 // );
 
-display('linearSearch', linearSearch, musiciens);
+// display('linearSearch', linearSearch, musiciens);
+
+display(
+	'binarySearch',
+	binarySearch,
+	[
+		4, 10, 26, 32, 38, 44, 52, 59, 60, 67, 77, 78, 86, 89, 91, 95, 99, 101,
+		108, 109,
+	],
+	99
+);
