@@ -7,6 +7,7 @@ import selectionSort from './algorithms/selectionSort';
 import mergeSort from './algorithms/mergeSort';
 import linearSearch from './algorithms/linearSearch';
 import binarySearch from './algorithms/binarySearch';
+import lcs from './algorithms/longestCommonSubsequence';
 
 const arrLength = 10;
 const maxNumber = 101;
@@ -84,12 +85,14 @@ const musiciens = [
 
 // display('linearSearch', linearSearch, musiciens);
 
-display(
-	'binarySearch',
-	binarySearch,
-	[
-		4, 10, 26, 32, 38, 44, 52, 59, 60, 67, 77, 78, 86, 89, 91, 95, 99, 101,
-		108, 109,
-	],
-	99
-);
+// display(
+// 	'binarySearch',
+// 	binarySearch,
+// 	[
+// 		4, 10, 26, 32, 38, 44, 52, 59, 60, 67, 77, 78, 86, 89, 91, 95, 99, 101,
+// 		108, 109,
+// 	],
+// 	99
+// );
+
+console.log(lcs('salut', 'salot'));
