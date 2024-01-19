@@ -21,15 +21,16 @@
  */
 const display = <T>(
 	name: string,
-	fn: (input: T[]) => T[] | T,
-	data: T[]
+	fn: (input: T[], input2?: T) => T[] | T,
+	data: T[],
+	target?: T
 ): void => {
 	console.log(`******* ${name} Algorithm *******`);
 
 	console.log('Data: ', data);
 
 	console.time(`${name}ExecutionTime`);
-	const result = fn(data);
+	const result = fn(data, target);
 	console.timeEnd(`${name}ExecutionTime`);
 
 	console.log('result:', result);
