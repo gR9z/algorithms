@@ -8,6 +8,8 @@
 -   Quick Sort
 -   Selection Sort
 -   Recursivity
+-   Binary Search
+-   Longest Common Subsequence
 
 ## Data Structures
 
