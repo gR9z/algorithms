@@ -1,3 +1,17 @@
+/**
+ * This code implements a generic graph data structure essential in computer science for modeling networks, relationships, and pathways in various domains like social networks and transportation systems.
+ *
+ * It includes two main classes: `Node<T>` and `Graph<T>`, plus a `Queue<T>` class for graph traversal.
+ *
+ * `Node<T>` Class:
+ * Represents a graph node. Stores data and adjacent nodes, supporting dynamic graph updates.
+ *
+ * `Graph<T>` Class:
+ * Manages the graph. Adds/removes nodes and edges and implements Depth-First Search (DFS) and Breadth-First Search (BFS) for graph traversal.
+ *
+ * Uses a Map for efficient node storage and handling. A custom comparator function provides flexibility for different data types.
+ */
+
 export class Node<T> {
 	data: T; // The data stored in the node.
 	adjacent: Node<T>[]; // An array of adjacent nodes.
