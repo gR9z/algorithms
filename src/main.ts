@@ -8,6 +8,8 @@ import mergeSort from './algorithms/mergeSort';
 import linearSearch from './algorithms/linearSearch';
 import binarySearch from './algorithms/binarySearch';
 import lcs from './algorithms/longestCommonSubsequence';
+import findDivergenceIndex from './algorithms/findDivergenceIndex';
+import findDivergenceIndexRecursive from './algorithms/findDivergenceIndexRecursive';
 
 const arrLength = 10;
 const maxNumber = 101;
@@ -95,4 +97,9 @@ const musiciens = [
 // 	99
 // );
 
-console.log(lcs('salut', 'salot'));
+// console.log(lcs('salut', 'salot'));
+
+console.log(findDivergenceIndex('bonjour', 'bonjour')); // -1
+console.log(findDivergenceIndex('aBCDEFG', 'bBCDEFG')); // 0
+console.log(findDivergenceIndex('HelloWorl', 'HelloWorld')); // 9
+console.log(findDivergenceIndexRecursive('HelloWorl', 'HelloWorld')); // 9
