@@ -10,6 +10,7 @@ import binarySearch from './algorithms/binarySearch';
 import lcs from './algorithms/longestCommonSubsequence';
 import findDivergenceIndex from './algorithms/findDivergenceIndex';
 import findDivergenceIndexRecursive from './algorithms/findDivergenceIndexRecursive';
+import { Graph, comparator } from './dataStructures/graph';
 
 const arrLength = 10;
 const maxNumber = 101;
@@ -99,7 +100,35 @@ const musiciens = [
 
 // console.log(lcs('salut', 'salot'));
 
-console.log(findDivergenceIndex('bonjour', 'bonjour')); // -1
-console.log(findDivergenceIndex('aBCDEFG', 'bBCDEFG')); // 0
-console.log(findDivergenceIndex('HelloWorl', 'HelloWorld')); // 9
-console.log(findDivergenceIndexRecursive('HelloWorl', 'HelloWorld')); // 9
+// console.log(findDivergenceIndex('bonjour', 'bonjour')); // -1
+// console.log(findDivergenceIndex('aBCDEFG', 'bBCDEFG')); // 0
+// console.log(findDivergenceIndex('HelloWorl', 'HelloWorld')); // 9
+// console.log(findDivergenceIndexRecursive('HelloWorl', 'HelloWorld')); // 9
+
+// Graph
+const graph = new Graph<number>(comparator);
+
+// Adding nodes
+graph.addNode(1);
+graph.addNode(2);
+graph.addNode(3);
+graph.addNode(4);
+graph.addNode(5);
+graph.addNode(6);
+graph.addNode(7);
+graph.addNode(8);
+
+// Adding edges
+graph.addEdge(1, 2);
+graph.addEdge(1, 3);
+graph.addEdge(2, 4);
+graph.addEdge(2, 5);
+graph.addEdge(3, 6);
+graph.addEdge(3, 7);
+graph.addEdge(4, 8);
+
+console.log('Depth-First Search:');
+graph.depthFirstSearch();
+
+console.log('Breadth-First Search:');
+graph.breadthFirstSearch();
