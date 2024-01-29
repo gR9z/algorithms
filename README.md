@@ -10,6 +10,7 @@
 -   Recursivity
 -   Binary Search
 -   Longest Common Subsequence
+-   Find Divergence Index + Recursivity
 
 ## Data Structures
 
