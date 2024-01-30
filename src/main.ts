@@ -11,6 +11,7 @@ import lcs from './algorithms/longestCommonSubsequence';
 import findDivergenceIndex from './algorithms/findDivergenceIndex';
 import findDivergenceIndexRecursive from './algorithms/findDivergenceIndexRecursive';
 import { Graph, comparator } from './dataStructures/graph';
+import { LinkedList } from './dataStructures/linkedList';
 
 const arrLength = 10;
 const maxNumber = 101;
@@ -109,26 +110,41 @@ const musiciens = [
 const graph = new Graph<number>(comparator);
 
 // Adding nodes
-graph.addNode(1);
-graph.addNode(2);
-graph.addNode(3);
-graph.addNode(4);
-graph.addNode(5);
-graph.addNode(6);
-graph.addNode(7);
-graph.addNode(8);
+// graph.addNode(1);
+// graph.addNode(2);
+// graph.addNode(3);
+// graph.addNode(4);
+// graph.addNode(5);
+// graph.addNode(6);
+// graph.addNode(7);
+// graph.addNode(8);
 
 // Adding edges
-graph.addEdge(1, 2);
-graph.addEdge(1, 3);
-graph.addEdge(2, 4);
-graph.addEdge(2, 5);
-graph.addEdge(3, 6);
-graph.addEdge(3, 7);
-graph.addEdge(4, 8);
+// graph.addEdge(1, 2);
+// graph.addEdge(1, 3);
+// graph.addEdge(2, 4);
+// graph.addEdge(2, 5);
+// graph.addEdge(3, 6);
+// graph.addEdge(3, 7);
+// graph.addEdge(4, 8);
 
-console.log('Depth-First Search:');
-graph.depthFirstSearch();
+// console.log('Depth-First Search:');
+// graph.depthFirstSearch();
 
-console.log('Breadth-First Search:');
-graph.breadthFirstSearch();
+// console.log('Breadth-First Search:');
+// graph.breadthFirstSearch();
+
+const linkedList = new LinkedList();
+linkedList.append(15);
+linkedList.append(58);
+linkedList.append(44);
+linkedList.append(150);
+console.log('The linked list contains: ');
+linkedList.display();
+console.log(`The length of the list is: ${linkedList.length()}`);
+console.log(linkedList.search(150));
+console.log(linkedList.isEmpty());
+linkedList.delete(58);
+
+const emptyLinkedList = new LinkedList();
+console.log(emptyLinkedList.isEmpty());
