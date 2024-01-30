@@ -15,3 +15,4 @@
 ## Data Structures
 
 -   Graph (& Breadth First Search + Depth First Search)
+-   Linked List
