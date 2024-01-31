@@ -1,3 +1,4 @@
+import { DoublyLinkedList } from './dataStructures/doublyLinkedList';
 import display from './utils/displayUtils';
 
 import bubbleSort from './algorithms/bubbleSort';
@@ -106,7 +107,6 @@ const musiciens = [
 // console.log(findDivergenceIndex('HelloWorl', 'HelloWorld')); // 9
 // console.log(findDivergenceIndexRecursive('HelloWorl', 'HelloWorld')); // 9
 
-// Graph
 const graph = new Graph<number>(comparator);
 
 // Adding nodes
@@ -135,16 +135,29 @@ const graph = new Graph<number>(comparator);
 // graph.breadthFirstSearch();
 
 const linkedList = new LinkedList();
-linkedList.append(15);
-linkedList.append(58);
-linkedList.append(44);
-linkedList.append(150);
-console.log('The linked list contains: ');
-linkedList.display();
-console.log(`The length of the list is: ${linkedList.length()}`);
-console.log(linkedList.search(150));
-console.log(linkedList.isEmpty());
-linkedList.delete(58);
+// linkedList.append(15);
+// linkedList.append(58);
+// linkedList.append(44);
+// linkedList.append(150);
+// console.log('The linked list contains: ');
+// linkedList.display();
+// console.log(`The length of the list is: ${linkedList.length()}`);
+// console.log(linkedList.search(150));
+// console.log(linkedList.isEmpty());
+// linkedList.delete(58);
 
-const emptyLinkedList = new LinkedList();
-console.log(emptyLinkedList.isEmpty());
+// const emptyLinkedList = new LinkedList();
+// console.log(emptyLinkedList.isEmpty());
+
+const doublyLinkedList = new DoublyLinkedList();
+console.log(doublyLinkedList.isEmpty());
+doublyLinkedList.append(5);
+doublyLinkedList.append(55);
+doublyLinkedList.append(12);
+doublyLinkedList.append(34);
+doublyLinkedList.append(26);
+doublyLinkedList.append(44);
+doublyLinkedList.search(12);
+doublyLinkedList.length();
+doublyLinkedList.delete(55);
+doublyLinkedList.display();
