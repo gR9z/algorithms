@@ -36,7 +36,14 @@ export class LinkedList {
 		}
 
 		if (this.tail) {
+			// If the tail exists, it means the list is not empty.
+			// Here, we set the 'next' property of the current tail to point to the new node.
+			// This effectively links the new node to the end of the list.
 			this.tail.next = newNode;
+
+			// After linking the new node, we update the 'tail' property of the list.
+			// The new node now becomes the new tail of the list.
+			// This is because, in a singly linked list, the tail is always the last node.
 			this.tail = newNode;
 		}
 	}
