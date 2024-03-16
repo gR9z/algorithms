@@ -1,30 +1,28 @@
 /**
- * Selection Sort Algorithm Analysis
+ * Bubble Sort Algorithm Analysis
  *
  * Time Complexity:
- * - Worst case: O(n²). This occurs because, for each element, the algorithm searches through the rest of the array to find the minimum element.
- * - Average case: O(n²). Regardless of the initial arrangement of the array, the algorithm always performs the same number of comparisons.
- * - Best case: O(n²). Even if the array is already sorted, the algorithm still compares each element to find the minimum in the unsorted part.
+ * - Worst case: O(n²). This occurs when the array is in reverse order, requiring each element to be compared and swapped until the entire array is sorted.
+ * - Average case: O(n²). Since it compares each pair of adjacent items, the total number of comparisons is roughly the same regardless of the initial order of the array.
+ * - Best case: O(n). If the array is already sorted, the algorithm can be optimized to detect this with a flag and stop early, making the time complexity linear.
  *
  * Space Complexity:
- * - O(1). Selection sort is an in-place sorting algorithm. It requires only a constant amount of additional memory space for its operations.
+ * - O(1). Bubble sort is an in-place sorting algorithm. It requires a small, constant amount of additional space for swapping elements, making it space efficient.
  *
- * Selection sort is a simple sorting algorithm that divides the input list into two parts: a sorted sublist of items which is built up from left to right, and a sublist of the remaining unsorted items. At each step, the algorithm finds the smallest (or largest, depending on sorting order) element in the unsorted sublist and exchanges it with the leftmost unsorted element, moving the sublist boundaries one element to the right.
+ * Bubble sort is a simple comparison-based algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted. The algorithm gets its name because smaller elements "bubble" to the top of the list (beginning of the array) with each iteration.
  *
- * The algorithm works by iterating over the array with two nested loops: the outer loop tracks the position of the first unsorted element, and the inner loop searches for the smallest element in the unsorted part of the array. The condition `if (smallestIndex !== i)` ensures that an exchange is only made if the smallest element found is not already in the current sorted position. This check avoids unnecessary swaps and is particularly useful for maintaining relative order of duplicate elements as much as possible, contributing to the overall efficiency.
+ * The algorithm works by iterating over the array with two nested loops: the outer loop tracks the progress of the sorting and ensures that each element is compared, and the inner loop performs the actual comparisons and swaps between adjacent elements. After each pass of the outer loop, the largest unsorted element is placed in its correct position, reducing the range of the next pass by one.
  *
- * The reason for using `arr.length - 1` in the outer loop is because on the final pass, the unsorted part will consist of only one element, which is necessarily the largest remaining element and is already in its correct position.
+ * The use of `arr.length - 1 - i` in the inner loop's condition optimizes the algorithm by reducing the number of comparisons in each subsequent pass. Since the i-th largest element is correctly placed at the end after the i-th pass, there is no need to compare it again.
  *
- * Under the hood, the algorithm repeatedly selects the smallest remaining unsorted element and moves it to the end of the sorted portion. This process involves comparing and potentially swapping elements, which is why it has quadratic time complexity.
- *
- * Despite its simplicity, the selection sort algorithm is not efficient for large datasets compared to more advanced algorithms like quicksort or mergesort.
+ * Despite its simplicity, bubble sort is not suitable for large datasets due to its quadratic time complexity. However, it has educational value in teaching the concept of sorting and algorithms in general. It is also useful for small datasets or datasets that are almost sorted.
  *
  * @param {number[]} arr The array of numbers to be sorted.
  * @returns {number[]} The sorted array.
  */
 const bubbleSort = (arr: number[]): number[] => {
 	for (let i = 0; i < arr.length; i++) {
-		for (let j = 0; j < arr.length - 1; j++) {
+		for (let j = 0; j < arr.length - 1 - i; j++) {
 			if (arr[j] > arr[j + 1]) {
 				[arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
 			}

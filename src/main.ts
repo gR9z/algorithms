@@ -41,13 +41,13 @@ const musiciens = [
 	'Janis Joplin',
 ];
 
-// display(
-// 	'bubbleSort',
-// 	bubbleSort,
-// 	Array.from({ length: arrLength }, () =>
-// 		Math.floor(Math.random() * maxNumber)
-// 	)
-// );
+display(
+	'bubbleSort',
+	bubbleSort,
+	Array.from({ length: arrLength }, () =>
+		Math.floor(Math.random() * maxNumber)
+	)
+);
 
 // display(
 // 	'bubbleSort',
