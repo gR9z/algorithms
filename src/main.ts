@@ -41,13 +41,13 @@ const musiciens = [
 	'Janis Joplin',
 ];
 
-// display(
-// 	'bubbleSort',
-// 	bubbleSort,
-// 	Array.from({ length: arrLength }, () =>
-// 		Math.floor(Math.random() * maxNumber)
-// 	)
-// );
+display(
+	'bubbleSort',
+	bubbleSort,
+	Array.from({ length: arrLength }, () =>
+		Math.floor(Math.random() * maxNumber)
+	)
+);
 
 // display(
 // 	'bubbleSort',
@@ -163,15 +163,15 @@ const linkedList = new LinkedList();
 // doublyLinkedList.delete(55);
 // doublyLinkedList.display();
 
-const binarySearchTree = new BinarySearchTree(comp);
-binarySearchTree.insert(100);
-binarySearchTree.insert(90);
-binarySearchTree.insert(70);
-binarySearchTree.insert(10);
-binarySearchTree.insert(110);
-binarySearchTree.insert(80);
-binarySearchTree.insert(120);
-binarySearchTree.insert(133);
-// binarySearchTree.inOrderTraversal(binarySearchTree.root);
-binarySearchTree.postOrderTraversal(binarySearchTree.root);
-// binarySearchTree.preOrderTraversal(binarySearchTree.root);
+// const binarySearchTree = new BinarySearchTree(comp);
+// binarySearchTree.insert(100);
+// binarySearchTree.insert(90);
+// binarySearchTree.insert(70);
+// binarySearchTree.insert(10);
+// binarySearchTree.insert(110);
+// binarySearchTree.insert(80);
+// binarySearchTree.insert(120);
+// binarySearchTree.insert(133);
+// // binarySearchTree.inOrderTraversal(binarySearchTree.root);
+// binarySearchTree.postOrderTraversal(binarySearchTree.root);
+// // binarySearchTree.preOrderTraversal(binarySearchTree.root);
